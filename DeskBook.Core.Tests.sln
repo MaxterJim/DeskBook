@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBook.Core.Tests", "DeskBook.Core.Tests\DeskBook.Core.Tests.csproj", "{24B8D321-34CA-4A72-88BD-7D1713F239AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskBook.Core", "DeskBook.Core\DeskBook.Core.csproj", "{F47BBC1D-772A-4C7C-AB14-112B4E3512FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24B8D321-34CA-4A72-88BD-7D1713F239AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24B8D321-34CA-4A72-88BD-7D1713F239AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24B8D321-34CA-4A72-88BD-7D1713F239AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24B8D321-34CA-4A72-88BD-7D1713F239AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F47BBC1D-772A-4C7C-AB14-112B4E3512FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F47BBC1D-772A-4C7C-AB14-112B4E3512FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F47BBC1D-772A-4C7C-AB14-112B4E3512FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F47BBC1D-772A-4C7C-AB14-112B4E3512FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
