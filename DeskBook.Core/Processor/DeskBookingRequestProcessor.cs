@@ -21,16 +21,26 @@ namespace DeskBook.Core.Processor
                 throw new ArgumentNullException(nameof(request));
             }
 
-            var availabelDesk = _deskRepository.GetAvailableDesks(request.Date);
+            var result = Create<DeskBookingResult>(request);
 
-            if (availabelDesk.Count() > 0)
+            var availabelDesks = _deskRepository.GetAvailableDesks(request.Date);
+
+            if (availabelDesks.FirstOrDefault() is Desk availableDesk) //Esta linea pregunta si hay un elemento en la lista y si es de tipo Desk si es asi lo almacena en la variable availableDesk
             {
-                _deskBookingRepository.Save(Create<DeskBooking>(request));
-            }
-            
+                //var availableDesk = availabelDesks.First(); //Esta linea se puede eliminar ya que en el if lo hace automaticamente
+                var deskBooking = Create<DeskBooking>(request);
+                deskBooking.DeskId = availableDesk.Id;
 
-            return Create<DeskBookingResult>(request);
-            
+                _deskBookingRepository.Save(deskBooking);
+
+                result.DeskBookingId = deskBooking.Id;
+                result.Code = DeskBookingResultCode.Success;
+            }
+            else
+            {
+                result.Code = DeskBookingResultCode.NoDeskAvailable;
+            }
+            return result;
         }
 
         /* 
